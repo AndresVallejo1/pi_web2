@@ -24,12 +24,12 @@ const Navbar: FC = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-blue-900 shadow-md px-6 py-4 flex justify-between items-center z-50">
       <Link href="/"><img src="/Images/Logo.png" alt="Logo de la página" className="h-10 w-auto" /></Link>
-      
+
       <ul className="flex space-x-6 text-white/90 font-medium items-center">
         {/* ... tus links de navegación ... */}
         <li><Link href="/" className="hover:text-white transition-colors">Nosotros</Link></li>
         <li><Link href="/services" className="hover:text-white transition-colors">Servicios</Link></li>
-        <li><ScrollLink to="citas" smooth duration={600} offset={-50} className="hover:text-white transition-colors cursor-pointer">Citas</ScrollLink></li>
+        <li><Link href="/#calendario" className="hover:text-white transition-colors">Citas</Link></li>
         <li><Link href="#mapa" className="hover:text-white transition-colors">Sedes</Link></li>
         <li><ScrollLink to="contacto" smooth duration={600} offset={-50} className="hover:text-white transition-colors cursor-pointer">Contacto</ScrollLink></li>
 
@@ -73,7 +73,7 @@ const Navbar: FC = () => {
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[60]">
             <div className="relative bg-white rounded-lg shadow-lg">
               <button onClick={() => setModalView(null)} className="absolute top-2 right-2 text-gray-500 hover:text-black text-2xl">✕</button>
-              
+
               {/* Muestra el formulario correcto según el estado */}
               {modalView === "client-login" && (
                 <div className="p-8">
